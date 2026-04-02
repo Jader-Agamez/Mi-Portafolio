@@ -1,0 +1,176 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding-top: 70px;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+}
+
+/* Texto - lado izquierdo */
+.heroText {
+  flex: 1;
+  animation: fadeInLeft 0.8s ease;
+}
+
+.heroText h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.heroText h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.9;
+}
+
+.heroText p {
+  font-size: var(--font-size-lg);
+  max-width: 500px;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+/* Foto - lado derecho */
+.heroImage {
+  flex-shrink: 0;
+  animation: fadeInRight 0.8s ease;
+}
+
+.profilePhoto {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.profilePhoto:hover {
+  transform: scale(1.05);
+}
+
+/* Botones */
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 0.875rem 2rem;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btnPrimary {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btnSecondary:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* Animaciones */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .profilePhoto {
+    width: 180px;
+    height: 180px;
+  }
+
+  .heroText h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .heroText h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .heroText p {
+    font-size: var(--font-size-base);
+    margin: 0 auto var(--spacing-md);
+  }
+
+  .ctaButtons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profilePhoto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}

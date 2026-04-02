@@ -1,0 +1,62 @@
+.carouselContainer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.carouselTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skillCard {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition);
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.skillIcon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skillCard h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .skillCard {
+    min-width: 250px;
+  }
+  
+  .carouselTrack {
+    animation: scroll 20s linear infinite;
+  }
+}
