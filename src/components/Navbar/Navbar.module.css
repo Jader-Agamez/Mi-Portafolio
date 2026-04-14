@@ -3,10 +3,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--bg-color);
-  box-shadow: var(--shadow-md);
+  background-color: rgba(15, 14, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 1.1rem 0;
 }
 
 .navContainer {
@@ -16,57 +17,53 @@
 }
 
 .logo {
-  font-size: var(--font-size-xl);
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--primary-color);
-  transition: var(--transition);
-}
-
-.logo:hover {
-  color: var(--secondary-color);
+  color: var(--text-color);
+  letter-spacing: 0.02em;
 }
 
 .navMenu {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 2.5rem;
   list-style: none;
 }
 
 .navMenu li a {
-  font-size: var(--font-size-base);
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-color);
-  transition: var(--transition);
-  position: relative;
-}
-
-.navMenu li a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
+  color: var(--text-light);
   transition: var(--transition);
 }
 
 .navMenu li a:hover {
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
-.navMenu li a:hover::after {
-  width: 100%;
+.resumeBtn {
+  padding: 0.5rem 1.25rem;
+  background-color: var(--primary-color);
+  color: white !important;
+  border-radius: 6px;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
+}
+
+.resumeBtn:hover {
+  background-color: var(--primary-light) !important;
+  color: white !important;
 }
 
 .themeBtn {
   background: none;
-  border: 2px solid var(--primary-color);
-  color: var(--text-color);
-  font-size: 1.1rem;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 1rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,42 +72,33 @@
 }
 
 .themeBtn:hover {
-  background-color: var(--primary-color);
-  color: white;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background: none;
   color: var(--text-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+  .hamburger { display: block; }
 
   .navMenu {
     position: fixed;
-    top: 70px;
+    top: 65px;
     right: -100%;
     flex-direction: column;
-    background-color: var(--bg-color);
+    background-color: var(--bg-secondary);
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    box-shadow: var(--shadow-lg);
     padding: 2rem 0;
     gap: 1.5rem;
+    border-top: 1px solid var(--border-color);
   }
 
-  .navMenu.active {
-    right: 0;
-  }
-
-  .navMenu li a {
-    font-size: var(--font-size-lg);
-  }
+  .navMenu.active { right: 0; }
 }

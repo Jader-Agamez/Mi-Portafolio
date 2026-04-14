@@ -1,172 +1,95 @@
+.contact {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 4rem;
+  margin: var(--spacing-xl) auto;
+  max-width: 1100px;
+}
+
 .contactGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto 4rem;
-  padding: 0 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.leftCol h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.leftCol p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.infoIcon {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.infoItem span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.rightCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .contactCard {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem 2rem;
-  border-radius: 20px;
+  gap: 0.75rem;
   text-decoration: none;
-  color: white;
-  font-weight: 600;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  min-height: 180px;
-  cursor: pointer;
+  color: var(--text-color);
+  transition: var(--transition);
+  min-height: 110px;
 }
 
 .contactCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.cardIcon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.cardText {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* Colores específicos para cada tarjeta */
-.whatsapp {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-}
-
-.email {
-  background: linear-gradient(135deg, #4285F4 0%, #1967D2 100%);
-}
-
-.cv {
-  background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
-}
-
-.github {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-  color: #24292e;
-}
-
-.github:hover {
-  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-}
-
-/* Formulario */
-.form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: var(--bg-color);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow-md);
-}
-
-.formTitle {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.formGroup {
-  margin-bottom: 1.25rem;
-}
-
-.formGroup input,
-.formGroup textarea {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
-  font-size: var(--font-size-base);
-  font-family: inherit;
-  background-color: var(--bg-secondary);
-  color: var(--text-color);
-  transition: border-color 0.3s ease;
-  resize: none;
-}
-
-.formGroup input:focus,
-.formGroup textarea:focus {
-  outline: none;
   border-color: var(--primary-color);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(124, 106, 247, 0.15);
 }
 
-.submitBtn {
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--primary-color);
-  color: white;
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+.cardIcon { font-size: 1.75rem; }
+.cardText { font-size: 0.9rem; font-weight: 600; }
 
-.submitBtn:hover:not(:disabled) {
-  background-color: var(--secondary-color);
-  transform: translateY(-2px);
-}
+.whatsapp .cardIcon { color: #25D366; }
+.email .cardIcon { color: #4285F4; }
+.cv .cardIcon { color: #EA4335; }
+.github .cardIcon { color: var(--text-color); }
+.linkedin .cardIcon { color: #0077B5; }
+.twitter .cardIcon { color: var(--text-color); }
 
-.submitBtn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-.success {
-  margin-top: 1rem;
-  text-align: center;
-  color: #25D366;
-  font-weight: 600;
-}
-
-.error {
-  margin-top: 1rem;
-  text-align: center;
-  color: #EA4335;
-  font-weight: 600;
-}
 @media (max-width: 768px) {
-  .contactGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .contactCard {
-    padding: 2rem 1rem;
-    min-height: 150px;
-  }
-
-  .cardIcon {
-    font-size: 2.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .cardText {
-    font-size: 1.125rem;
-  }
+  .contact { padding: 2rem 1.5rem; margin: var(--spacing-lg) 1rem; }
+  .contactGrid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .rightCol { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 480px) {
-  .contactGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .contactCard {
-    padding: 2.5rem 1.5rem;
-  }
+  .rightCol { grid-template-columns: 1fr; }
 }

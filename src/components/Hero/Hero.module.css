@@ -2,8 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background-color: var(--bg-color);
   padding-top: 70px;
 }
 
@@ -11,121 +10,94 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 4rem;
   width: 100%;
 }
 
-/* Texto - lado izquierdo */
-.heroText {
-  flex: 1;
-  animation: fadeInLeft 0.8s ease;
+.heroText { flex: 1; }
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
 .heroText h1 {
-  font-size: var(--font-size-3xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-sm);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
 }
 
-.heroText h2 {
-  font-size: var(--font-size-xl);
-  font-weight: 400;
-  margin-bottom: var(--spacing-md);
-  opacity: 0.9;
+.heroText h1 span {
+  color: var(--primary-color);
 }
 
 .heroText p {
-  font-size: var(--font-size-lg);
-  max-width: 500px;
-  margin-bottom: var(--spacing-md);
-  opacity: 0.85;
+  font-size: 1rem;
+  color: var(--text-light);
+  max-width: 460px;
   line-height: 1.8;
+  margin-bottom: 2.5rem;
 }
 
-/* Foto - lado derecho */
-.heroImage {
-  flex-shrink: 0;
-  animation: fadeInRight 0.8s ease;
-}
-
-.profilePhoto {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  border: 5px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-.profilePhoto:hover {
-  transform: scale(1.05);
-}
-
-/* Botones */
 .ctaButtons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.btnPrimary,
-.btnSecondary {
-  padding: 0.875rem 2rem;
-  font-size: var(--font-size-base);
+.btnPrimary {
+  padding: 0.8rem 1.8rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.95rem;
   font-weight: 600;
   border-radius: 8px;
   transition: var(--transition);
   display: inline-block;
 }
 
-.btnPrimary {
-  background-color: white;
-  color: var(--primary-color);
-}
-
 .btnPrimary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
 }
 
 .btnSecondary {
+  padding: 0.8rem 1.8rem;
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: inline-block;
 }
 
 .btnSecondary:hover {
-  background-color: white;
+  border-color: var(--primary-color);
   color: var(--primary-color);
 }
 
-/* Animaciones */
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Foto */
+.heroImage { flex-shrink: 0; }
+
+.profilePhoto {
+  width: 300px;
+  height: 360px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 60px rgba(124, 106, 247, 0.2);
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Responsive */
 @media (max-width: 900px) {
   .heroContent {
     flex-direction: column-reverse;
@@ -133,44 +105,18 @@
     padding: 2rem 0;
   }
 
+  .heroText p { margin: 0 auto 2.5rem; }
+  .ctaButtons { justify-content: center; }
+
   .profilePhoto {
-    width: 180px;
-    height: 180px;
-  }
-
-  .heroText h1 {
-    font-size: var(--font-size-2xl);
-  }
-
-  .heroText h2 {
-    font-size: var(--font-size-lg);
-  }
-
-  .heroText p {
-    font-size: var(--font-size-base);
-    margin: 0 auto var(--spacing-md);
-  }
-
-  .ctaButtons {
-    justify-content: center;
+    width: 220px;
+    height: 260px;
   }
 }
 
 @media (max-width: 480px) {
   .profilePhoto {
-    width: 150px;
-    height: 150px;
-  }
-
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btnPrimary,
-  .btnSecondary {
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
+    width: 180px;
+    height: 220px;
   }
 }

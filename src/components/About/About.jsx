@@ -3,42 +3,45 @@ import styles from './About.module.css'
 
 const About = () => {
   return (
-    <section id="about" className="section">
+    <section id="about" className={styles.about}>
       <div className="container">
-        <h2 className="section-title">Sobre Mí</h2>
-        
-        <div className={styles.aboutContent}>
-          <div className={styles.aboutText}>
+        <div className={styles.aboutGrid}>
+
+          <div className={styles.leftCol}>
+            <span className={styles.badge}>Trayectoria</span>
+            <h2>Comprometido con la excelencia técnica.</h2>
             <p>
-              Soy un Desarrollador Fullstack Junior con un año de experiencia enfocado en el ecosistema de JavaScript. 
-              Actualmente, dedico mi energía a perfeccionar el uso de React y herramientas modernas de frontend para construir interfaces rápidas y escalables.
+              Mi enfoque se centra en la intersección entre la funcionalidad
+              robusta y la estética minimalista. Creo que el gran software no
+              solo debe funcionar, sino también sentirse intuitivo y fluido.
             </p>
             <p>
-             Mi enfoque va más allá de escribir código; 
-             busco entender el problema del negocio para ofrecer soluciones técnicas sólidas. 
-             Me motiva trabajar en entornos colaborativos donde pueda aportar mi capacidad analítica y seguir creciendo profesionalmente.
+              Como desarrollador junior, dedico mi tiempo a perfeccionar el uso
+              de Clean Code y arquitecturas modernas que permitan la
+              escalabilidad y mantenibilidad de cada proyecto.
             </p>
           </div>
 
-          <div className={styles.features}>
-            <div className={styles.feature}>
-              <FaCode className={styles.icon} />
+          <div className={styles.rightCol}>
+            <div className={styles.featureCard}>
+              <FaCode className={styles.featureIcon} />
               <h3>Código Limpio</h3>
-              <p>Escribo código organizado y fácil de mantener</p>
+              <p>Escritura de código semántico e intuitivo siguiendo las mejores prácticas de la industria.</p>
             </div>
 
-            <div className={styles.feature}>
-              <FaLaptopCode className={styles.icon} />
-              <h3>Responsive Design</h3>
-              <p>Diseños que se adaptan a cualquier dispositivo</p>
+            <div className={styles.featureCard}>
+              <FaLaptopCode className={styles.featureIcon} />
+              <h3>Diseño Responsive</h3>
+              <p>Interfaces fluidas que se adaptan perfectamente a cualquier tamaño de pantalla.</p>
             </div>
 
-            <div className={styles.feature}>
-              <FaRocket className={styles.icon} />
+            <div className={styles.featureCard}>
+              <FaRocket className={styles.featureIcon} />
               <h3>Aprendizaje Continuo</h3>
-              <p>Siempre aprendiendo nuevas tecnologías</p>
+              <p>Explorando constantemente nuevas tecnologías para ofrecer soluciones innovadoras.</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>

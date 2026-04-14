@@ -7,25 +7,20 @@ const Hero = () => {
       <div className="container">
         <div className={styles.heroContent}>
 
-          {/* Texto */}
           <div className={styles.heroText}>
-            <h1>¡Hola! Soy Jader Agamez</h1>
-            <h2>Desarrollador Web Junior</h2>
+            <span className={styles.badge}>Digital Architect</span>
+            <h1>¡Hola! Soy <span>Jader Agamez</span></h1>
             <p>
-              Apasionado por crear experiencias web increíbles. 
-              Especializado en HTML, CSS, JavaScript y React.
+              Desarrollador Web Junior apasionado por construir
+              experiencias digitales impecables a través de
+              código limpio y diseño funcional.
             </p>
             <div className={styles.ctaButtons}>
-              <a href="#projects" className={styles.btnPrimary}>
-                Ver Proyectos
-              </a>
-              <a href="#contact" className={styles.btnSecondary}>
-                Contáctame
-              </a>
+              <a href="#projects" className={styles.btnPrimary}>Ver Proyectos</a>
+              <a href="#contact" className={styles.btnSecondary}>Contáctame</a>
             </div>
           </div>
 
-          {/* Foto */}
           <div className={styles.heroImage}>
             <img src={foto} alt="Jader Agamez" className={styles.profilePhoto} />
           </div>

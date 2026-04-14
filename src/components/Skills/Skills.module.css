@@ -1,14 +1,38 @@
+.skills {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl) 0;
+}
+
+.badge {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
 .carouselContainer {
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .carouselTrack {
   display: flex;
-  gap: 2rem;
-  animation: scroll 30s linear infinite;
+  gap: 1.5rem;
+  animation: scroll 25s linear infinite;
   width: fit-content;
 }
 
@@ -17,46 +41,38 @@
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .skillCard {
-  background-color: var(--bg-secondary);
-  padding: var(--spacing-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem 2.5rem;
   border-radius: 12px;
   text-align: center;
   transition: var(--transition);
-  min-width: 200px;
+  min-width: 160px;
   flex-shrink: 0;
 }
 
 .skillCard:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(124, 106, 247, 0.15);
 }
 
 .skillIcon {
-  font-size: 4rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
 }
 
 .skillCard h3 {
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-md);
-  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
 }
 
 @media (max-width: 768px) {
-  .skillCard {
-    min-width: 250px;
-  }
-  
-  .carouselTrack {
-    animation: scroll 20s linear infinite;
-  }
+  .skillCard { min-width: 130px; }
 }

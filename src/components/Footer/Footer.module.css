@@ -1,56 +1,47 @@
 .footer {
-  background-color: #111827;
-  color: #f9fafb;
-  padding: var(--spacing-md) 0;
-  text-align: center;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
 }
 
-.footerContent p {
-  margin: 0.5rem 0;
-  font-size: var(--font-size-base);
+.footerContent {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerLogo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.footerCopy {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-align: center;
 }
 
 .socialLinks {
   display: flex;
-  justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 1rem;
 }
 
 .socialLink {
-  font-size: 1.5rem;
-  color: #9ca3af;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: var(--text-light);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
-.socialLink:hover {
-  transform: translateY(-3px);
-}
+.socialLink:hover { color: var(--primary-color); }
 
-.socialLink:nth-child(1):hover { color: #ffffff; }
-.socialLink:nth-child(2):hover { color: #0077B5; }
-.socialLink:nth-child(3):hover { color: #E1306C; }
-
-.heart {
-  color: #e74c3c;
-  animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-@media (max-width: 768px) {
-  .footerContent p {
-    font-size: var(--font-size-sm);
-  }
+@media (max-width: 600px) {
+  .footerContent { flex-direction: column; text-align: center; }
 }
