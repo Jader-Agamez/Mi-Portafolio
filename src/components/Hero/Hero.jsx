@@ -8,7 +8,7 @@ const Hero = () => {
         <div className={styles.heroContent}>
 
           <div className={styles.heroText}>
-            <span className={styles.badge}>Digital Architect</span>
+            <span className={styles.badge}>Desarrollador de Software</span>
             <h1>¡Hola! Soy <span>Jader Agamez</span></h1>
             <p>
               Desarrollador Web Junior apasionado por construir
