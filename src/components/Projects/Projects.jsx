@@ -1,25 +1,18 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import styles from './Projects.module.css'
+import imgFrontend from '../../assets/img/IMGFrontend.png'
 
 const Projects = () => {
   const projects = [
-    {
-      id: 1,
-      title: 'Sistema de Gestión Empresarial',
-      description: 'Un sistema integral de control de acceso y gestión de usuarios diseñado para entornos empresariales.',
-      tech: ['Angular', 'TypeScript', 'SQL'],
-      github: 'https://github.com/Jader-Agamez/Autoriza',
-      demo: 'https://tuproyecto1.com',
-      icon: '🏢'
-    },
+    
     {
       id: 2,
-      title: 'App Interactiva de Tareas',
-      description: 'Aplicación web interactiva enfocada en la productividad personal con sincronización en la nube.',
-      tech: ['React', 'CSS', 'JavaScript', 'PostgreSQL'],
-      github: 'https://github.com/Jader-Agamez/diversaseguros',
-      demo: 'https://diversaseguros.com.co/',
-      icon: '✅'
+      title: 'App Interactiva de salud',
+      description: 'Una aplicación web interactiva que permite a los usuarios encontrar hospitales según la EPS, especialista y nivel de complejidad del usuario.',
+      tech: ['React', 'CSS', 'JavaScript','HTML', 'MySQL'],
+      github: 'https://github.com/Jader-Agamez/Backend-App-salud',
+      demo: 'https://github.com/Jader-Agamez?tab=repositories',
+      image: imgFrontend
     },
   ]
 
@@ -32,7 +25,9 @@ const Projects = () => {
         <div className={styles.projectsGrid}>
           {projects.map(project => (
             <div key={project.id} className={styles.projectCard}>
-              <div className={styles.projectImage}>{project.icon}</div>
+              <div className={styles.projectImage}>
+                <img src={project.image} alt={project.title} />
+              </div>
 
               <div className={styles.projectContent}>
                 <div className={styles.techStack}>

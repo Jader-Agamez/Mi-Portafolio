@@ -43,11 +43,19 @@
 .projectImage {
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--border-color) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .projectImage img {
+  transform: scale(1.05);
 }
 
 .projectContent { padding: 1.5rem; }

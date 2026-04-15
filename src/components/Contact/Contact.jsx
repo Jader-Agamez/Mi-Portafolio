@@ -32,7 +32,7 @@ const Contact = () => {
 
           {/* Derecha - tarjetas */}
           <div className={styles.rightCol}>
-            <a href="/Currículum Vitae CV Jader Andres Agamez Murillo.pdf" download="HojaDeVida-JaderAgamez.pdf" className={`${styles.contactCard} ${styles.cv}`}>
+            <a href="/Currículum Jader Agamez Murillo.pdf" download="HojaDeVida-JaderAgamez.pdf" className={`${styles.contactCard} ${styles.cv}`}>
               <FaFileAlt className={styles.cardIcon} />
               <span className={styles.cardText}>Resume</span>
             </a>

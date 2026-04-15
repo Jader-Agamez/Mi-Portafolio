@@ -40,7 +40,7 @@ const Navbar = () => {
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
           <li>
             <a
-              href="/Currículum Vitae CV Jader Andres Agamez Murillo.pdf"
+              href="/Currículum Jader Agamez Murillo.pdf"
               download="HojaDeVida-JaderAgamez.pdf"
               className={styles.resumeBtn}
               onClick={closeMenu}
