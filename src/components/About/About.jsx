@@ -11,14 +11,14 @@ const About = () => {
             <span className={styles.badge}>Trayectoria</span>
             <h2>Comprometido con la excelencia técnica.</h2>
             <p>
-              Mi enfoque se centra en la intersección entre la funcionalidad
-              robusta y la estética minimalista. Creo que el gran software no
-              solo debe funcionar, sino también sentirse intuitivo y fluido.
+              Desarrollador junior full stack enfocado en crear experiencias digitales donde la eficiencia técnica y el diseño minimalista convergen. 
+              Mi práctica diaria se centra en el dominio de JavaScript y la gestión de datos con MySQL,
+              bajo una mentalidad de arquitecturas modernas y mantenibles.
             </p>
             <p>
-              Como desarrollador junior, dedico mi tiempo a perfeccionar el uso
-              de Clean Code y arquitecturas modernas que permitan la
-              escalabilidad y mantenibilidad de cada proyecto.
+              Me apasiona la escalabilidad, 
+              por lo que actualmente exploro servicios de Cloud Computing (AWS) para asegurar que mis proyectos no solo se vean bien, 
+              sino que respondan con potencia y fluidez en el mundo real.
             </p>
           </div>
 

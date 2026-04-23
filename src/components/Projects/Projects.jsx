@@ -4,6 +4,15 @@ import imgFrontend from '../../assets/img/IMGFrontend.png'
 
 const Projects = () => {
   const projects = [
+    {
+      id: 1,
+      title: 'App E-commerce',
+      description: 'Una aplicación web de comercio electrónico desarrollada con React y Node.js.',
+      tech: ['React', 'CSS', 'JavaScript','MySQL'],
+      github: 'https://github.com/Jader-Agamez/Backend-E-commerce',
+      demo: 'https://github.com/Jader-Agamez?tab=repositories',
+      icono: "🛒"
+    },
     
     {
       id: 2,
