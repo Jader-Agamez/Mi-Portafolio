@@ -9,7 +9,7 @@ const About = () => {
 
           <div className={styles.leftCol}>
             <span className={styles.badge}>Trayectoria</span>
-            <h2>Comprometido con la excelencia técnica.</h2>
+            <h2>Descripción general.</h2>
             <p>
               Desarrollador junior full stack enfocado en crear experiencias digitales donde la eficiencia técnica y el diseño minimalista convergen. 
               Mi práctica diaria se centra en el dominio de JavaScript y la gestión de datos con MySQL,

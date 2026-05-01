@@ -28,8 +28,8 @@ const Projects = () => {
   return (
     <section id="projects" className={styles.projects}>
       <div className="container">
-        <span className={styles.badge}>Portfolio</span>
-        <h2 className={styles.sectionTitle}>Proyectos Destacados</h2>
+        <span className={styles.badge}>Mis Proyectos</span>
+        <h2 className={styles.sectionTitle}>Proyectos Destacados.</h2>
 
         <div className={styles.projectsGrid}>
           {projects.map(project => (

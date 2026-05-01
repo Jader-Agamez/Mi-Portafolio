@@ -1,6 +1,7 @@
 .projects {
   background-color: var(--bg-color);
   padding: var(--spacing-xl) 0;
+  scroll-margin-top: 0px;
 }
 
 .badge {

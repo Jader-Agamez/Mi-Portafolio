@@ -35,9 +35,9 @@ const Navbar = () => {
         <a href="#home" className={styles.logo}>Jader Agamez</a>
 
         <ul className={`${styles.navMenu} ${isOpen ? styles.active : ''}`}>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+          <li><a href="#about" onClick={closeMenu}>Sobre mi</a></li>
+          <li><a href="#projects" onClick={closeMenu}>Proyectos</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contacto</a></li>
           <li>
             <a
               href="/Currículum Jader Agamez Murillo.pdf"
